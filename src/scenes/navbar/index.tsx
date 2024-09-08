@@ -11,7 +11,7 @@ type Props = {
     isTopOfPage: boolean;
 }
 
-const Navbar = ({isTopOfPage, selectedPage, setSelectedPage }: Props) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const flexBetween = "flex items-center justify-between"
 
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)")
@@ -25,14 +25,10 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-full gap-16`}>
                         <img src={Logo} alt="logo" />
-
                         {
                             isAboveMediumScreens ? (
-
-
-
-                                <div className={`${flexBetween} w-full`}>
-                                    <div className={`${flexBetween} gap-8 text-sm`}>
+                                <div className={`${flexBetween} w-full `}>
+                                    <div className={`${flexBetween} gap-12 text-md`}>
                                         <Link
                                             page='Home'
                                             selectedPage={selectedPage}
@@ -55,7 +51,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                         />
                                     </div>
                                     <div className={`${flexBetween} gap-8 `}>
-                                        <p>Sign In</p>
+                                        <p className='cursor-pointer hover:text-primary-300 duration-300'>Sign In</p>
                                         <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
                                     </div>
                                 </div>
@@ -80,27 +76,27 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         </div>
                         {/* MENU ITEMS */}
                         <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-                                        <Link
-                                            page='Home'
-                                            selectedPage={selectedPage}
-                                            setSelectedPage={setSelectedPage}
-                                        />
-                                        <Link
-                                            page='Benefits'
-                                            selectedPage={selectedPage}
-                                            setSelectedPage={setSelectedPage}
-                                        />
-                                        <Link
-                                            page='Our Classes'
-                                            selectedPage={selectedPage}
-                                            setSelectedPage={setSelectedPage}
-                                        />
-                                        <Link
-                                            page='Contact Us'
-                                            selectedPage={selectedPage}
-                                            setSelectedPage={setSelectedPage}
-                                        />
-                                    </div>
+                            <Link
+                                page='Home'
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link
+                                page='Benefits'
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link
+                                page='Our Classes'
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link
+                                page='Contact Us'
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                        </div>
                     </div>
                 )
             }

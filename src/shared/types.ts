@@ -9,3 +9,22 @@ export interface BenefitType {
   title: string;
   description: string;
 }
+export interface ClassType {
+  name: string;
+  description?: string;
+  image: string;
+}
+declare module 'react-slick' {
+
+  export interface Settings {
+    dots?: boolean;
+    infinite?: boolean;
+    speed?: number;
+    slidesToShow?: number;
+    slidesToScroll?: number;
+    autoplay?: boolean;
+    autoplaySpeed?: number;
+    // Add other properties here as needed
+  }
+
+}

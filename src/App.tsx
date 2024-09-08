@@ -3,6 +3,9 @@ import Navbar from "./scenes/navbar/index.js"
 import { SelectedPage } from "@/shared/types.js";
 import Home from "./scenes/home/index.js";
 import Benefits from "./scenes/benefits";
+import OurClasses from "./scenes/ourClasses/index.js";
+import ContactUs from "./scenes/ContactUs/index.js";
+import Footer from "./scenes/footer/index.js";
 
 
 
@@ -35,6 +38,9 @@ function App() {
         />
         <Home setSelectedPage={setSelectedPage}/>
         <Benefits setSelectedPage={setSelectedPage}/>
+        <OurClasses setSelectedPage={setSelectedPage}/>
+        <ContactUs setSelectedPage={setSelectedPage}/>
+        <Footer />
    </div>
     </>
   )
